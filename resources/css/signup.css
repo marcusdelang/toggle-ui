@@ -1,0 +1,54 @@
+:root{
+    --primary: #FEFEFA;
+    --whiteAsPicture: rgba(255, 255, 255, 0.867);
+    --red: rgb(89, 17, 17);
+    --black: rgb(17, 3, 3);
+    --shadow: 0 1px 5px rgb(203, 188, 188);
+    --background: #FFFFF0;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--red);
+}
+
+body{
+    background: var(--background);
+    margin: 3vw;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover
+}
+
+.wrapper  {
+    display: grid;
+    grid-gap: 1vw;
+}
+#signup-grid h1{
+    font-size: 5vw;
+    text-align: center;
+}
+
+#signup-grid form{
+    box-shadow: var(--shadow);
+}
+
+#signup-grid form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#signup-grid button{
+    font-weight: bolder;
+    font-size: 3vw;
+    color: var(--red);
+    cursor: pointer;
+    background: var(--primary);
+}
+#signup-grid button:hover{
+    background: var(--black); 
+    color: var(--primary);
+}
