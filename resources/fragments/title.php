@@ -1,0 +1,1 @@
+Chat program with PHP server (no framework). AJAX is used to reduce network traffic.

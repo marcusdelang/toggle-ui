@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cookbook xmlns="http://www.mycookbook-android.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="xml/recipe.xsd">
+
+	<recipe>
+		<title>Meatballs</title>
+		<preptime>10 min</preptime>
+		<cooktime>10 min</cooktime>
+		<totaltime>20 min</totaltime>
+		<description>
+			Tasty Swedish Meatballs
+		</description>
+		<ingredient>
+
+								<li>1 pound lean ground beef</li>
+								<li>2 cloves garlic chopped</li>
+								<li>2 tablespoons diced onion</li>
+								<li>1 large egg</li>
+								<li>1/2 teaspoon salt</li>
+								<li>1/2 teaspoon ground black pepper</li>
+								<li>2 tablespoons bread or cracker crumbs</li>
+								<li>2 tablespoons chopped fresh parsley (optional)</li>
+								<li>olive oil</li>
+
+		</ingredient>
+		<recipetext>
+									<li>Combine beef, veal, and pork in a large bowl. Add garlic, eggs, cheese, parsley, salt and pepper.</li>
+									<li>Blend bread crumbs into meat mixture. Slowly add the water 1/2 cup at a time. The mixture should be very moist but still hold its shape if rolled into meatballs.</li>
+									<li>Heat olive oil in a large skillet. Fry meatballs in batches.</li>
+									<li>Remove the meatballs from the skillet or saute pan and drain on a plate lined with paper towels.</li>
+		</recipetext>
+		<url></url>
+		<video></video>
+		<quantity>4 servings</quantity>
+		<imagepath></imagepath>
+		<imageurl>resources/images/meatballs.jpg</imageurl>
+		<comments></comments>
+		<source></source>
+		<nutrition></nutrition>
+		<rating></rating>
+
+	</recipe>
+
+	<recipe>
+		<title>Swedish Pancakes</title>
+		<preptime>10 min</preptime>
+		<cooktime>10 min</cooktime>
+		<totaltime>20 min</totaltime>
+		<description>
+			Tasty Swedish Pancakes
+		</description>
+		<ingredient>
+			<li>1 cup all-purpose flour</li>
+			<li>2 tablespoons white sugar</li>
+			<li>2 tablespoons baking powders</li>
+			<li>1 large egg, beaten</li>
+			<li>1 teaspoon salt</li>
+			<li>1 cup milk</li>
+			<li>2 tablespoons vegetable oil</li>
+		</ingredient>
+		<recipetext>
+			<li>In a large bowl, sift together the flour, baking powder, salt and sugar.</li>
+			<li>Make a well in the center and pour in the milk, egg and melted butter and mix until smooth.</li>
+			<li>Heat a lightly oiled griddle or frying pan over medium high heat. </li>
+			<li>Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake.</li>
+		</recipetext>
+		<url></url>
+		<quantity>4 servings</quantity>
+		<imagepath></imagepath>
+		<imageurl>resources/images/pancakes.jpg</imageurl>
+		<comments></comments>
+		<source></source>
+		<video></video>
+		<nutrition></nutrition>
+		<rating></rating>
+	</recipe>
+
+</cookbook>
