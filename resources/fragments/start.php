@@ -6,5 +6,5 @@
 
 use TastyRecipes\Util\Util;
 
-require_once 'classes/TastyRecipes/Util/Util.php';
+require_once 'classes/Toggle/Util/Util.php';
 Util::initRequest();
