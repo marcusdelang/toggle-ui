@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<title>On and off</title>
-    <script type="text/javascript" src="/resources/js/onAndOff.js"></script>
+    <script type="text/javascript" src="/Resources/js/onOffForm.js"></script>
 	</head>
 	<body>
 	<div>

@@ -7,12 +7,7 @@ class Controller  {
 
     public function turnOn($command){
         $requestHandler=new RequestHandler();       
-        return $requestHandler->turnOn();
+        return $requestHandler->turnOn($command);
     }	
-
-    public function turnOff($command){
-        $requestHandler=new RequestHandler();       
-        return $requestHandler->turnOff();
-    }
 
 }
