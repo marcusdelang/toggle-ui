@@ -6,19 +6,15 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
         <!--[if IE 6]><link rel="stylesheet" type="text/css" href="resources/css/ie6.css" /><![endif]-->
-        <link rel="stylesheet" type="text/css" href="resources/css/navigationbar.css" />
     </head>
     <body>
         <header class="section group">
             <?php include TOGGLE_FRAGMENTS . 'header.php' ?>
         </header>
         <main class="section group">
-            <nav class="section group">
-                <?php include TOGGLE_FRAGMENTS . 'navigationbar.php' ?>
-            </nav>
             <div class="section group">
-            </div>
 
+            </div>
             <footer class="section group">
                 <?php include TOGGLE_FRAGMENTS . 'footer.php' ?>
             </footer>

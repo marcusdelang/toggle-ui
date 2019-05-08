@@ -1,7 +1,7 @@
-    <nav className="navbar-main">
-        <div className="logo">togglE</div>
-        <div className="spacing"></div>
-        <div className="navbar-items">
+    <nav class="navbar-main">
+        <div class="logo">togglE</div>
+        <div class="spacing"></div>
+        <div class="navbar-items">
             <ul>
                 <li>
                 <a href="#">Home</a>
