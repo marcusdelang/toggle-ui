@@ -1,3 +1,3 @@
-<div>
-<p class="header-text">Sample program for the ID1354 course</p>
+<div> 
+    <p>Toggle program for the II1302 course</p>
 </div>

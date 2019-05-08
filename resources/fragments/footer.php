@@ -1,3 +1,4 @@
-<div class="col span_4_of_4">
-    No copyright, Last updated 160818
+<div>
+    @copyright: group 13, II1302 KTH
+    <link>Contact us</link>   
 </div>
