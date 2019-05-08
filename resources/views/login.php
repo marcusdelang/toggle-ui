@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php include CHAT_FRAGMENTS . 'title.php' ?></title>
         <meta charset="UTF-8">
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
