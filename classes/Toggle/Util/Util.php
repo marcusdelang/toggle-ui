@@ -1,6 +1,6 @@
 <?php
 
-namespace Chat\Util;
+namespace Toggle\Util;
 
 /**
  * Some utility methods.
