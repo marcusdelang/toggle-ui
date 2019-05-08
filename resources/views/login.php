@@ -6,10 +6,7 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
         <!--[if IE 6]><link rel="stylesheet" type="text/css" href="resources/css/ie6.css" /><![endif]-->
-        <link rel="stylesheet" type="text/css" href="resources/css/responsive.css" />
-        <link rel="stylesheet" type="text/css" href="resources/css/4cols.css" />
-        <link rel="stylesheet" type="text/css" href="resources/css/8cols.css" />
-        <link rel="stylesheet" type="text/css" href="resources/css/chat.css" />
+        <link rel="stylesheet" type="text/css" href="resources/css/navigationbar.css" />
     </head>
     <body>
         <header class="section group">

@@ -1,10 +1,14 @@
-<ul class="menu col span_4_of_4">
-    <li> Link 1</li>
-    <li> Link 2</li>
-    <li> Link 3</li>
-    <li> Link 4</li>
-    <li> Link 5</li>
-    <li> Link 6</li>
-    <li> Link 7</li>
-    <li> Link 8</li>
-</ul>
+    <nav className="navbar-main">
+        <div className="logo">togglE</div>
+        <div className="spacing"></div>
+        <div className="navbar-items">
+            <ul>
+                <li>
+                <a href="#">Home</a>
+                <a href="#">Map</a>
+                <a href="#">Devices</a>
+                <a href="#">Login</a>                        
+                </li>
+            </ul>
+        </div>
+    </nav>

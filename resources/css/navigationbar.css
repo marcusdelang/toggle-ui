@@ -1,0 +1,50 @@
+.navbar-main {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    background: rgb(198, 255, 231);
+    height: 10vh;
+  }
+  .logo {
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 2rem;
+    font-family: "Comic Sans MS", Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .spacing {
+    flex: 1;
+  }
+  .navbar-main{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem; 
+  }
+  .navbar-items ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-items li{
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  
+  }
+  .navbar-items {
+  
+    color: rgb(163, 6, 6);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3vw;
+    padding: 0.2rem;
+  
+  }
+  
+  .navbar-items :hover,
+  .navbar-items :active {
+    color: darkgreen;
+  }
