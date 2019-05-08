@@ -15,4 +15,4 @@ Util::initRequest();
 $controller = SessionManager::getController();
 //SessionManager::storeController($controller);
 
-include TOGGLE_VIEWS . 'login.php';
+include TOGGLE_VIEWS . 'devices.php';

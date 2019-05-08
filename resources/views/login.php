@@ -7,9 +7,7 @@
         <!--[if IE 6]><link rel="stylesheet" type="text/css" href="resources/css/ie6.css" /><![endif]-->
     </head>
     <body>
-        <header class="section group">
-            <?php include TOGGLE_FRAGMENTS . 'header.php' ?>
-        </header>
+        <?php include TOGGLE_FRAGMENTS . 'header.php' ?>
         <main class="section group">
             <div class="section group">
 
