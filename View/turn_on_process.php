@@ -2,12 +2,12 @@
 <?php
 use Toggle\Controller\SessionManager;
 $command = $_POST["command"];
-$controller = SessionManager::getController();
-$turnOnResult = $controller->turnOn($command);
- if ($turnOnResult === True) {
-	$status=1;
+//$controller = SessionManager::getController();
+//$turnOnResult = $controller->turnOn($command);
+ if ($command === "on") {
+	$status="off";
 }else{	
-	$status=0;
+	$status="on";
 }
 echo \json_encode($status);
 ?>
