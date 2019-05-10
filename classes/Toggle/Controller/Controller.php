@@ -1,18 +1,23 @@
 <?php
 
-namespace Toggle\Controller;
-use Toggle\Model\RequestHandler;
+//use Toggle\Model\Device;
+require_once 'e:\Datateknik KTH\Github\toggle-ui\classes\Toggle\Model\Device.php';
 
 class Controller  {
 
-    public function turnOn($command){
-        $requestHandler=new RequestHandler();       
-        return $requestHandler->turnOn();
-    }	
-
-    public function turnOff($command){
-        $requestHandler=new RequestHandler();       
-        return $requestHandler->turnOff();
+    public function getPowerStatus($token){
+        $device=new Device($token);       
+        return $device->getPowerStatus();
     }
 
+    public function getConnectionStatus($token){
+        $device=new Device($token);       
+        return $device->getConnectionStatus();
+    }
+
+    public function turnOn($token){
+        $device=new Device($token);       
+        return $device->turnOn();
+    }
 }
+?>
