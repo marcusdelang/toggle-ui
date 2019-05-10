@@ -1,7 +1,9 @@
 <?php
 
-namespace Toggle\Controller;
+namespace Toggle\SessionManager;
 use Toggle\Controller\Controller;
+
+const TEST = 'toggle';
 
 class SessionManager  {
 

@@ -14,7 +14,7 @@
         <script src="resources/js/device.js"/></script>
     </head>
     <body>
-        <?php include TOGGLE_FRAGMENTS . 'header.php' ?>
+        <?php include($_SERVER["DOCUMENT_ROOT"].'/resources/fragments/header.php'); ?>
         <main class="main-structure">
             <div class="div-structure">
             <h1>Here are your devices</h1>
@@ -34,7 +34,7 @@
                 <input  id="device_token" 
                         type="text" 
                         name="text" 
-                        value="6Wl93iesIV" 
+                        value="test_token" 
                         readonly="readonly"/>
                 <input  type="text" 
                         name="text" 
@@ -43,8 +43,8 @@
                 <input  id="power_status" 
                         type="text" 
                         name="text" 
-                        value="on" 
-                        placeholder="On"
+                        value="N/A" 
+                        placeholder="unknown"
                         readonly="readonly"/>
                 <input  id="connectivity_status" 
                         type="text" 
@@ -62,7 +62,7 @@
             </form>
             </div>
             <footer class="section group">
-                <?php include TOGGLE_FRAGMENTS . 'footer.php' ?>
+            <?php include($_SERVER["DOCUMENT_ROOT"].'/resources/fragments/footer.php'); ?>
             </footer>
         </main>
     </body>

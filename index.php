@@ -9,10 +9,11 @@ namespace Toggle\View;
 use \Toggle\Util\Util;
 use Toggle\Controller\SessionManager;
 
-require_once 'classes/Toggle/Util/Util.php';
+include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Util/Util.php');
+
 Util::initRequest();
 
-$controller = SessionManager::getController();
+//$controller = SessionManager::getController();
 //SessionManager::storeController($controller);
 
-include TOGGLE_VIEWS . 'devices.php';
+include($_SERVER["DOCUMENT_ROOT"].'/resources/views/devices.php');

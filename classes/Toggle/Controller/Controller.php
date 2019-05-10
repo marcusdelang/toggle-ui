@@ -1,7 +1,7 @@
 <?php
 
 //use Toggle\Model\Device;
-require_once 'e:\Datateknik KTH\Github\toggle-ui\classes\Toggle\Model\Device.php';
+include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Model/Device.php');
 
 class Controller  {
 

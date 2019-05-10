@@ -1,5 +1,5 @@
 <?php
-require_once 'e:\Datateknik KTH\Github\toggle-ui\classes\Toggle\Util\Http.php';
+include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Util/Http.php');
 class Device {
     
     private $name;
