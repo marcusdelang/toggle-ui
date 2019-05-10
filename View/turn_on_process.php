@@ -6,5 +6,5 @@ $controller  =new Controller();
 $result=$controller->turnOn("HpKAF6BBi3");
 $var=array("turn_on_result"=>$result);
 $turnOnResult= json_encode($var);
-echo $connectionStatus;
+echo $turnOnResult;
 ?>

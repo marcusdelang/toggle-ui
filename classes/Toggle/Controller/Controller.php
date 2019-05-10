@@ -19,5 +19,10 @@ class Controller  {
         $device=new Device($token);       
         return $device->turnOn();
     }
+
+    public function turnOff($token){
+        $device=new Device($token);       
+        return $device->turnOff();
+    }
 }
 ?>

@@ -47,5 +47,18 @@ class Device {
         else{
             return "false";
         }
+    }
+
+    public function turnOff(){
+        $json=json_encode(array("token"=>$this->token));
+        $url="http://130.229.166.82/api/power/off";
+        $http=new Http();
+        $httpResult=$http->post($url,$json);
+        if($httpResult["statusCode"]==="200"){
+            return "true";
         }
+        else{
+            return "false";
+        }
+    }
 }
