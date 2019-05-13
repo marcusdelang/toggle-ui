@@ -17,10 +17,6 @@ class User {
     public function login(){
         return $this->databaseAccess->checkLogin($this->username, $this->password);   
     }
-
-
-
-
     
     public function signUp(){
         $result = $this->databaseAccess->checkUsername($this->username);  

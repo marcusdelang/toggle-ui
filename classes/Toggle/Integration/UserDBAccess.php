@@ -21,7 +21,7 @@ class UserDBAccess {
 			$safePassword = $this->conn->real_escape_string($password);
 		    $statment = $this->conn->prepare("SELECT * FROM users WHERE username =? AND password =?;");
 		if (!$statment) {
-			return FALSE;
+			return "Can not have access to the database!";
 		} else {
             $statment->bind_param("ss", $safeUsername, $safePassword);
             if($statment->execute() === TRUE) {
@@ -36,6 +36,24 @@ class UserDBAccess {
 		mysqli_close($this->conn) or die (mysql_error());
     }
 
+    public function checkUsername($username){  
+     $safeUsername = $this->conn->real_escape_string($username);
+     $statment = $this->conn->prepare("SELECT * FROM users WHERE username =?;");
+     if (!$statment) {
+      return FALSE;
+     } else {
+     $statment->bind_param("s", $safeUsername);
+     if($statment->execute() === TRUE) {
+         $statment->store_result();
+         if ($statment->num_rows > 0) {
+             return TRUE;
+         } else {
+             return FALSE;
+         }	
+     }
+ }
+ mysqli_close($this->conn) or die (mysql_error());
+}
 
 
 
@@ -43,7 +61,8 @@ class UserDBAccess {
 
 
 
-    
+
+
 	
     
     public function insertUser($username,$password){

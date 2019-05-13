@@ -6,11 +6,11 @@ $password = $_POST["password"];
 $controller = SessionManager::getController();
 $result = $controller->login($username, $password);
 
- if ($result === "True") {
+ if ($result === "true") {
 	$_SESSION["username"] = $username;
 	SessionManager::storeController($controller);
  }
- 
+
 $var=array("login_result"=>$result);
 $loginResult= json_encode($var);
 echo $loginResult;

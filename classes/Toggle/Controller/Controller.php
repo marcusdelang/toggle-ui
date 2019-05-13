@@ -11,6 +11,11 @@ class Controller  {
         return $user->login();
     }
 
+    public function signUp($username,$password,$email){
+        $user = new User($username,$password,$email);
+        return $user->signUp();
+    }
+
     public function getPowerStatus($token){
         $device=new Device($token);       
         return $device->getPowerStatus();
