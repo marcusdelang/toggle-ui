@@ -4,13 +4,14 @@ use Toggle\Controller\SessionManager;
 $username = $_POST["username"];
 $password = $_POST["password"];
 $controller = SessionManager::getController();
-$loginResult = $controller->login($username, $password);
- if ($loginResult === True) {
+$result = $controller->login($username, $password);
+
+ if ($result === "True") {
 	$_SESSION["username"] = $username;
 	SessionManager::storeController($controller);
-	$var=array("loginResult"=>True);
-}else{	
-	$var=array("loginResult"=>False);
-}
-echo json_encode($var);
+ }
+ 
+$var=array("login_result"=>$result);
+$loginResult= json_encode($var);
+echo $loginResult;
 ?>
