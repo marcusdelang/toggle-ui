@@ -16,4 +16,4 @@ Util::initRequest();
 //$controller = SessionManager::getController();
 //SessionManager::storeController($controller);
 
-include($_SERVER["DOCUMENT_ROOT"].'/resources/views/home.php');
+include($_SERVER["DOCUMENT_ROOT"].'/resources/views/map.php');

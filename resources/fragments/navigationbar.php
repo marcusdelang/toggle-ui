@@ -4,10 +4,10 @@
         <div class="navbar-items">
             <ul>
                 <li>
-                <a href="#">Home</a>
-                <a href="#">Map</a>
-                <a href="#">Devices</a>
-                <a href="#">Login</a>                        
+                <a href="index.php">Home</a>
+                <a href="mapPage.php">Map</a>
+                <a href="devicesPage.php">Devices</a>
+                <a href="loginPage.php">Login</a>                        
                 </li>
             </ul>
         </div>

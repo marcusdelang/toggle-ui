@@ -1,0 +1,5 @@
+<FilesMatch "conversation.txt">
+Order allow,deny
+Deny from all
+
+</FilesMatch>
