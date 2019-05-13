@@ -40,7 +40,7 @@ class UserDBAccess {
      $safeUsername = $this->conn->real_escape_string($username);
      $statment = $this->conn->prepare("SELECT * FROM users WHERE username =?;");
      if (!$statment) {
-      return FALSE;
+      return "Can not have access to the database!";
      } else {
      $statment->bind_param("s", $safeUsername);
      if($statment->execute() === TRUE) {
@@ -54,6 +54,27 @@ class UserDBAccess {
  }
  mysqli_close($this->conn) or die (mysql_error());
 }
+
+    public function insertUser($username,$password, $email){
+		$safeUsername = $this->conn->real_escape_string($username); 
+        $safePassword = $this->conn->real_escape_string($password); 	
+        $safeEmail = $this->conn->real_escape_string($email); 	
+		$statment = $this->conn->prepare("INSERT INTO users (username, password, email) VALUES (?,?,?);");
+		if (!$statment) {
+            return "false";
+			//echo "Prepare failed: (" . $this->conn->errno . ") " . $this->conn->error;
+		} else {
+            $statment->bind_param("sss", $safeUsername, $safePassword, $email);
+            $statment->execute() ;
+            if($statment->execute() === TRUE) {
+                $statment->store_result();
+	            return "true";
+            }else{
+                return "false";
+            }
+		}
+		mysqli_close($this->conn) or die (mysql_error());
+    }
 
 
 

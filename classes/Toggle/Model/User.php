@@ -6,6 +6,7 @@ class User {
     
     private $username;
     private $password;
+    private $email;
     private $databaseAccess;
     
     public function __construct($username,$password) {
@@ -23,9 +24,7 @@ class User {
         if($result ===TRUE){
             return "Username exist!";
         }else{
-            //$hash = password_hash($this->password, PASSWORD_DEFAULT);
-			$this->databaseAccess->insertUser($this->username, $this->password);
-            return 'OK!';
+			return $this->databaseAccess->insertUser($this->username, $this->password,  $this->email);
         }   
    }
    
