@@ -5,4 +5,6 @@
 require_once './resources/fragments/start.php';
 use Toggle\Controller\SessionManager;
     unset($_SESSION['username']);
-include 'index.php';
+    $var=array("login_result"=>"true");
+    $logoutResult= json_encode($var);
+    echo $logoutResult;
