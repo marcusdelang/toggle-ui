@@ -45,5 +45,21 @@ class Controller  {
         $databaseAccess=new DeviceDBAccess();
         return $databaseAccess->removeDevice($token);
     } 
+
+    public function getDevices($username){
+		$safeRecipe = $this->conn->real_escape_string($recipe); 
+		$statment = $this->conn->prepare("SELECT * FROM allcomments WHERE recipe =?;");
+		if (!$statment) {
+			echo "Prepare failed: (" . $this->conn->errno . ") " . $this->conn->error;
+		} else {
+            $statment->bind_param("s", $safeRecipe);
+            if($statment->execute() === TRUE) {
+				$resultArray = $statment->get_result();
+				//return json_encode($resultArray);
+				return $resultArray;
+			}
+		}
+			mysqli_close($this->conn) or die (mysql_error());
+    }
 }
 ?>
