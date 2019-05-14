@@ -58,7 +58,6 @@ class DeviceDBAccess {
             return "Can not have access to the database!";
 		} else {
             $statment->bind_param("s", $token);
-            $statment->execute() ;
             if($statment->execute() === TRUE) {
                 $statment->store_result();
 	            return "true";
