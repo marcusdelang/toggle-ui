@@ -1,6 +1,4 @@
 <?php
-namespace Toggle\Model;
-use Toggle\Integration\UserDBAccess;
 
 class User {
     

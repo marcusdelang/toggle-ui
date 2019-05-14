@@ -12,7 +12,7 @@ class Device {
     
     public function getPowerStatus(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/status";
+        $url="http://130.229.145.217/api/status";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){
@@ -25,7 +25,7 @@ class Device {
 
    public function getConnectionStatus(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/status";
+        $url="http://130.229.145.217/api/status";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){
@@ -35,10 +35,9 @@ class Device {
             return "false";
         }
     }
-
     public function turnOn(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/power/on";
+        $url="http://130.229.145.217/api/power/on";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){
@@ -51,7 +50,7 @@ class Device {
 
     public function turnOff(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/power/off";
+        $url="http://130.229.145.217/api/power/off";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){

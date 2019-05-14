@@ -1,5 +1,33 @@
 .main-structure {
     height: 100%;
     margin-top: 5vh; 
-
 }
+h1 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;  
+}
+
+body {
+    background: #FFF0CE;
+}
+
+.footer-structure .info{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding: 1;
+}
+.footer-structure .info{
+    width: 100%;
+}
+
+
+
+

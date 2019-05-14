@@ -1,6 +1,5 @@
 <?php
 
-//use Toggle\Model\Device;
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Model/Device.php');
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Model/User.php');
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Integration/UserDBAccess.php');

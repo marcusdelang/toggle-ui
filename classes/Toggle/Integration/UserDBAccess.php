@@ -1,5 +1,4 @@
 <?php
-namespace Toggle\Integration;
 class UserDBAccess {
    private $conn;
     
@@ -8,7 +7,7 @@ class UserDBAccess {
         $dbPassword = "";
         $dbServername = "localhost";
         $dbName = "toggle";
-		$conn = new \mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
+		$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 		 $this->conn = $conn;
 		if ($this->conn->connect_errno) {
             printf("Connect failed: %s\n", $this->conn->connect_error);
@@ -78,26 +77,26 @@ class UserDBAccess {
 
 
 
-
-
-
-
-
-
 	
     
-    public function insertUser($username,$password){
-		$safeUsername = $this->conn->real_escape_string($username); 
-		$safePassword = $this->conn->real_escape_string($password); 		
-		$statment = $this->conn->prepare("INSERT INTO user_info (username, password) VALUES (?,?);");
-		if (!$statment) {
-			echo "Prepare failed: (" . $this->conn->errno . ") " . $this->conn->error;
-		} else {
-            $statment->bind_param("ss", $safeUsername, $safePassword);
-            $statment->execute() ;
-			return TRUE;
-		}
-		mysqli_close($this->conn) or die (mysql_error());
-    }
+//    public function insertUser($username,$password){
+//		$safeUsername = $this->conn->real_escape_string($username); 
+//		$safePassword = $this->conn->real_escape_string($password); 		
+//		$statment = $this->conn->prepare("INSERT INTO user_info (username, password) VALUES (?,?);");
+//		if (!$statment) {
+//			echo "Prepare failed: (" . $this->conn->errno . ") " . $this->conn->error;
+//		} else {
+//            $statment->bind_param("ss", $safeUsername, $safePassword);
+//            $statment->execute() ;
+//			return TRUE;
+//		}
+//		mysqli_close($this->conn) or die (mysql_error());
+//    }
+
+
+
+
+
+
 	
 }

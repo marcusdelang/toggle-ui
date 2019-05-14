@@ -1,0 +1,40 @@
+
+.div-structure{
+    align-content: center;
+    width: 100%;
+
+}
+.div-structure *{
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size-adjust: 0.58;
+}
+
+
+
+.device-header *{
+    margin: 0;
+    font-weight: bolder;
+    width: 20vh;
+   
+}
+.device-items *{
+    margin: 0;
+    width: 20vh;
+    height: 2rem;
+}
+.new-devices *{
+    margin: 0;
+    width: 20vh;
+    height: 2rem;
+}
+
+.add-device *{
+    margin: 0;
+    width: 20vh;
+    height: 2rem;
+}
