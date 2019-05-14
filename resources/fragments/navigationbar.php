@@ -17,6 +17,7 @@
                 if(isset($_SESSION["username"])){
                     echo '<a id="logout" type="submit" value="Login">Logout</a>';
                 }else{
+                    echo '<a href="signupPage.php">Signup</a>'; 
                     echo '<a href="loginPage.php">Login</a>'; 
                 }
                 ?>

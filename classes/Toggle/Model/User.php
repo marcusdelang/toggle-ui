@@ -7,10 +7,12 @@ class User {
     private $email;
     private $databaseAccess;
     
-    public function __construct($username,$password) {
+    public function __construct($username,$password,$email) {
         $this->databaseAccess = new UserDBAccess();
         $this->username = $username;
         $this->password = $password;
+        $this->email = $email;
+
     }
 
     public function login(){

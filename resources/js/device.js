@@ -6,9 +6,6 @@
 
 });
 
-
-
-
 function getConnectionStatus(){
     $.ajax({ 
         url: '/View/get_connection_status.php',
@@ -23,7 +20,7 @@ function getConnectionStatus(){
         }
         },
         error: function(a,b,c) {
-          alert(b)
+          //alert()
         }
    }); 
 };
@@ -93,6 +90,7 @@ function toggleDevice(){
 });
 }
 }  
+
 
 function removeDevice() {
   event.preventDefault();

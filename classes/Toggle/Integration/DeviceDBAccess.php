@@ -33,14 +33,15 @@ class DeviceDBAccess {
         mysqli_close($this->conn) or die (mysql_error());
     }
 
-    public function addDevice($token,$name){
+    public function addDevice($token,$name, $username){
 		$safeToken = $this->conn->real_escape_string($token); 
-        $safeName = $this->conn->real_escape_string($name); 	
-		$statment = $this->conn->prepare("INSERT INTO devices (token,name) VALUES (?,?);");
+        $safeName = $this->conn->real_escape_string($name); 
+        $safeUserName = $this->conn->real_escape_string($username); 	
+		$statment = $this->conn->prepare("INSERT INTO devices (token,name,username) VALUES (?,?,?);");
 		if (!$statment) {
             return "Can not have access to the database!";
 		} else {
-            $statment->bind_param("ss", $token, $name);
+            $statment->bind_param("sss", $token, $name, $username);
             if($statment->execute() === TRUE) {
                 $statment->store_result();
 	            return "true";

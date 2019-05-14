@@ -27,7 +27,6 @@
                 <input  type="text" name="text" value="Name of Device" readonly="readonly"/>
                 <input  type="text" name="text" value="Power Status" readonly="readonly"/>
                 <input  type="text" name="text" value="Connection Status" readonly="readonly"/>
-                <input  type="text" name="tex" value="Additional remarks"/>
             </div>
             <div class="device-items">
                 <button id="toggle_device_status" 
@@ -54,10 +53,6 @@
                         name="text" 
                         value="Offline" 
                         readonly="readonly"/>
-                <input  id="device_remark"
-                        type="text" 
-                        name="text" 
-                        value="On the sink in kitchen"/>
                 <button id="delete_device"
                         type="submit" 
                         name="action" 

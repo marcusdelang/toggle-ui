@@ -1,0 +1,29 @@
+.signup-structure {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+.signup-structure *{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signup-structure label {
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+.signup-structure input {
+    width: 300px;
+    height: 30px;
+}
+.signup-structure button {
+    
+    width: 300px;
+    height: 30px;
+}

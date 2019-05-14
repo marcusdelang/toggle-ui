@@ -8,6 +8,7 @@ $controller = SessionManager::getController();
 $result = $controller->login($username, $password);
 
  if ($result === "true") {
+	session_start();
 	$_SESSION["username"] = $username;
 	SessionManager::storeController($controller);
  }
