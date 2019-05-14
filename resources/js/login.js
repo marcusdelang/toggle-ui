@@ -17,7 +17,7 @@ $.ajax({
     success: function (response) {
     if(response['login_result'] == "true"){
         alert('Youve logged in')
-        
+        window.location.href="devicesPage.php"
     }else{
         alert('Incorrect username or password')
     }

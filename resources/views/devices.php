@@ -14,6 +14,8 @@
 			    crossorigin="anonymous">
         </script>
         <script src="resources/js/device.js"></script>
+        <script src="resources/js/logout.js"></script>
+
     </head>
     <body>
         <?php include($_SERVER["DOCUMENT_ROOT"].'/resources/fragments/header.php'); ?>
@@ -63,8 +65,8 @@
             </div>
             <div id="new-devices">
             </div>
-            <div class="add-device">
-                <button id="add_device" type="submit" name="action">Add new device</button>
+            <div class="add-device">  
+                <a href="addDevicePage.php" id="add_device" role="button" name="action">Add new device</a>
             </div>
             </div>
             <footer class="footer-structure">

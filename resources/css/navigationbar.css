@@ -15,12 +15,15 @@
 
   .spacing {
     flex: 0.95;
+    font-weight: bolder;
+    font-size: 2vw;
+    text-align: center;
   }
 
   .navbar-main{
     color: #FFF0CE;
     display: flex;
-    height: 6vh;
+    height: 4rem;
     align-items: center;
     padding: 0 1rem; 
   }
@@ -31,17 +34,18 @@
     display: flex;
 
   }
-  .navbar-items a{
+  .navbar-items *{
     color: #FFF0CE;
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: bolder;
-    font-size: 3vw;
+    font-size: 2rem;
     padding: 0.2rem;
   }
 
+
   
-  .navbar-items :hover,
-  .navbar-items :active {
+  .navbar-items a:hover,
+  .navbar-items a:active {
     color: darkgreen;
   }

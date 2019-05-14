@@ -45,53 +45,6 @@ function getPowerStatus(){
 };
 
 
-function turnOnDevice() {
-    var device = "3ja3bU?geh";
-    $.ajax({ 
-        url: '/View/turn_on_process.php',
-        data: {
-            token : device,
-        },
-        type: 'post',
-        dataType:'json',
-        success: function(data) {
-            if(data["turn_on_result"] === "true"){
-            $('#power_status').val("On");
-            }else if(data["turn_on_result"] === "false"){
-            $('#power_status').val("Off");
-            }else{
-                $('#power_status').val("UNKNOWN");
-                getPowerStatus();
-                }    
-        },
-        error: function(error){
-        }
-});
-}
-
-function turnOffDevice() {
-    var device = "3ja3bU?geh";
-    $.ajax({
-      url: "/View/turn_off_process.php",
-      data: {
-        token: device
-      },
-      type: "post",
-      dataType: "json",
-      success: function(data) {
-        if (data["turn_off_result"] === "true") {
-          $("#power_status").val("Off");
-        } else if (data["turn_off_result"] === "false") {
-          $("#power_status").val("On");
-        } else {
-          $("#power_status").val("UNKNOWN");
-          getPowerStatus();
-        }
-      },
-      error: function(error) {}
-    });
-}
-
 function toggleDevice(){
     var device = "3ja3bU?geh";
     var power_status = $('#power_status').val();
@@ -138,3 +91,5 @@ function toggleDevice(){
 });
 }
 }  
+
+

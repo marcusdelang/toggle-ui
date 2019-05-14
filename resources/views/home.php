@@ -12,6 +12,8 @@
 			    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			    crossorigin="anonymous">
         </script>
+        <script src="resources/js/logout.js"></script>
+
     </head>
     <body>
         <?php include($_SERVER["DOCUMENT_ROOT"].'/resources/fragments/header.php'); ?>

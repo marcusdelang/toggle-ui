@@ -8,17 +8,26 @@
         <!--[if IE 6]><link rel="stylesheet" type="text/css" href="resources/css/ie6.css" /><![endif]-->
         <link rel="stylesheet" type="text/css" href="resources/css/mainstructure.css" />
         <link rel="stylesheet" type="text/css" href="resources/css/navigationbar.css" />
+        <link rel="stylesheet" type="text/css" href="resources/css/addDevice.css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 			    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			    crossorigin="anonymous">
         </script>
-        <script src="resources/js/logout.js"></script>
-
+        <script src="resources/js/addDevice.js"></script>
     </head>
     <body>
         <?php include($_SERVER["DOCUMENT_ROOT"].'/resources/fragments/header.php'); ?>
         <main class="main-structure">
-            <h1>UNDER CONSTRUCTION</h1>
+            <div id="spacer"></div>
+            <div class="add-device-structure">       
+            <form>
+            <label for="token_device">Token of your device:</label>
+            <input id="token_device" type="text" name="token">
+            <label for="name_device">Name of your device:</label>
+            <input id="name_device" type="text" name="name">
+            <button id="submit" type="submit" value="Login">Submit</button>
+            </form>
+            </div>
             <footer class="footer-structure">
             <?php include($_SERVER["DOCUMENT_ROOT"].'/resources/fragments/footer.php'); ?>
             </footer>

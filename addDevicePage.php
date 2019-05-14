@@ -1,11 +1,11 @@
 <?php
+
 /**
- * Shows the about page.
+ * Shows the device page.
  */
 
 //namespace Toggle\View;
 if(isset($_SESSION['username'])){
-    
 }else{session_start();}
 
 //use Toggle\Controller\SessionManager;
@@ -15,4 +15,4 @@ if(isset($_SESSION['username'])){
 //$controller = SessionManager::getController();
 //SessionManager::storeController($controller);
 
-include($_SERVER["DOCUMENT_ROOT"].'/resources/views/about.php');
+include($_SERVER["DOCUMENT_ROOT"].'/resources/views/addDevice.php');

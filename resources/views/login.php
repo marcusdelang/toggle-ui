@@ -14,6 +14,7 @@
 			    crossorigin="anonymous">
         </script>
         <script src="resources/js/login.js"></script>
+        <script src="resources/js/logout.js"></script>
 
     </head>
     <body>
