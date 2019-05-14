@@ -1,13 +1,14 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Util/Http.php');
 class Device {
-    
-    private $name;
     private $token;   
+    private $name;
+    private $databaseAccess;
     
     public function __construct($token) {
         //$this->token = 'HpKAF6BBi3';
         $this->token =$token;
+        $this->name = $name;
+        $this->databaseAccess = new DeviceDBAccess();
     }
     
     public function getPowerStatus(){
@@ -60,4 +61,14 @@ class Device {
             return "false";
         }
     }
+
+    public function add(){
+        $result = $this->databaseAccess->checkDeviceToken($this->token);  
+        if($result ===TRUE){
+            return "Token exist!";
+        }else{
+			return $this->databaseAccess->addDevice($this->token, $this->name);        
+        }
+    }
+
 }

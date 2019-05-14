@@ -3,6 +3,7 @@
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Model/Device.php');
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Model/User.php');
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Integration/UserDBAccess.php');
+include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Integration/DeviceDBAccess.php');
 
 class Controller  {
     public function login($username,$password){
@@ -34,5 +35,15 @@ class Controller  {
         $device=new Device($token);       
         return $device->turnOff();
     }
+
+    public function addDevice($token, $name){
+        $device = new Device($token, $name);
+        return $device->add();
+    } 
+
+    public function removeDevice($token){
+        $databaseAccess=new DeviceDBAccess();
+        return $databaseAccess->removeDevice($token);
+    } 
 }
 ?>
