@@ -1,5 +1,4 @@
 <?php
-
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Model/Device.php');
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Model/User.php');
 include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Integration/UserDBAccess.php');
@@ -46,5 +45,11 @@ class Controller  {
         $databaseAccess=new DeviceDBAccess();
         return $databaseAccess->removeDevice($token);
     } 
+    
+    public function getDevices($username){
+        $databaseAccess=new DeviceDBAccess();
+        return $databaseAccess->getDevices($username);
+    } 
+
 }
 ?>

@@ -68,4 +68,20 @@ class DeviceDBAccess {
 		}
 		mysqli_close($this->conn) or die (mysql_error());
     }
+
+    public function getDevices($username){
+		$safeUsername = $this->conn->real_escape_string($username); 
+		$statment = $this->conn->prepare("SELECT * FROM devices WHERE username =?;");
+		if (!$statment) {
+			return "Can not have access to the database!";
+		} else {
+            $statment->bind_param("s", $username);
+            if($statment->execute() === TRUE) {
+				$resultArray = $statment->get_result();
+				return $resultArray;
+			}
+		}
+			mysqli_close($this->conn) or die (mysql_error());
+    }
+	
 }
