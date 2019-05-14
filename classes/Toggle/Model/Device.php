@@ -1,18 +1,18 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"].'/classes/Toggle/Util/Http.php');
 class Device {
-    
-    private $name;
     private $token;   
+    private $name;
+    private $databaseAccess;
     
-    public function __construct($token) {
-        //$this->token = 'HpKAF6BBi3';
+    public function __construct($token,$name) {
         $this->token =$token;
+        $this->name = $name;
+        $this->databaseAccess = new DeviceDBAccess();
     }
     
     public function getPowerStatus(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/status";
+        $url="http://130.229.145.217/api/status";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){
@@ -25,7 +25,7 @@ class Device {
 
    public function getConnectionStatus(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/status";
+        $url="http://130.229.145.217/api/status";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){
@@ -35,10 +35,9 @@ class Device {
             return "false";
         }
     }
-
     public function turnOn(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/power/on";
+        $url="http://130.229.145.217/api/power/on";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){
@@ -51,7 +50,7 @@ class Device {
 
     public function turnOff(){
         $json=json_encode(array("token"=>$this->token));
-        $url="http://130.229.166.82/api/power/off";
+        $url="http://130.229.145.217/api/power/off";
         $http=new Http();
         $httpResult=$http->post($url,$json);
         if($httpResult["statusCode"]==="200"){
@@ -61,4 +60,14 @@ class Device {
             return "false";
         }
     }
+
+    public function add(){
+        $result = $this->databaseAccess->checkDeviceToken($this->token);  
+        if($result ===TRUE){
+            return "Token exist!";
+        }else{
+			return $this->databaseAccess->addDevice($this->token, $this->name);        
+        }
+    }
+
 }

@@ -1,0 +1,66 @@
+
+.div-structure{
+    align-content: center;
+    width: 100%;
+
+}
+.div-structure *{
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size-adjust: 0.58;
+}
+
+.device-header *{
+    margin: 0;
+    font-weight: bolder;
+    width: 20vh;   
+}
+.device-items *{
+    margin: 0;
+    width: 20vh;
+    height: 2rem;
+}
+.device-items button{
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    background: #83B4B3;
+    font-size:  1rem;
+    margin: 0;
+    width: 20vh;
+    height: 2.4rem;
+}
+.new-devices *{
+    margin: 0;
+    width: 20vh;
+    height: 2rem;
+}
+
+
+.add-device input{
+    margin: 0;
+    width: 20vh;
+    height: 2rem;
+}
+.add-device button{
+    margin: 0;
+    width: 20vh;
+    height: 2.4rem;
+}
+#add_device {
+        display: block;
+        width: 115px;
+        height: 25px;
+        text-decoration: none;
+        background: #83B4B3;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+        font-size:  1rem;
+}

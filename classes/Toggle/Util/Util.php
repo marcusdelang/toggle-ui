@@ -1,7 +1,5 @@
 <?php
 
-namespace Toggle\Util;
-
 /**
  * Some utility methods.
  */
