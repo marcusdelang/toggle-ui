@@ -36,8 +36,8 @@ class Controller  {
         return $device->turnOff();
     }
 
-    public function addDevice($token, $name){
-        $device = new Device($token, $name);
+    public function addDevice($token, $name, $username){
+        $device = new Device($token, $name, $username);
         return $device->add();
     } 
 

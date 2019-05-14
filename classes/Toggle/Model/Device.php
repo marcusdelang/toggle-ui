@@ -2,12 +2,13 @@
 class Device {
     private $token;   
     private $name;
+    private $username;   
     private $databaseAccess;
     
     public function __construct($token) {
-        //$this->token = 'HpKAF6BBi3';
         $this->token =$token;
         $this->name = $name;
+        $this->username = $username;        
         $this->databaseAccess = new DeviceDBAccess();
     }
     
@@ -67,7 +68,7 @@ class Device {
         if($result ===TRUE){
             return "Token exist!";
         }else{
-			return $this->databaseAccess->addDevice($this->token, $this->name);        
+			return $this->databaseAccess->addDevice($this->token, $this->name, $this->username);        
         }
     }
 
