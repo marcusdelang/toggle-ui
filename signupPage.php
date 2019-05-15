@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Shows the map page.
+ * Shows the signup page.
  */
 
 if(isset($_SESSION['username'])){

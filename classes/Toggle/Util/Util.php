@@ -19,8 +19,6 @@ final class Util {
             require_once 'classes/' . \str_replace('\\', '/', $class) . '.php';
         });
 
-        //session_start();
-        //self::defineConstants();
     }
 
     private static function defineConstants() {

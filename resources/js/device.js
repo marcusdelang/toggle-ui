@@ -5,7 +5,7 @@ $(function() {
 });
 $(setInterval(function() {
   getDevices();
-},30000));
+},300000));
 
 function getConnectionStatus(token){
     $.ajax({ 
@@ -17,7 +17,7 @@ function getConnectionStatus(token){
             if(data["connection_status"] === "true"){
             $('.' + token).siblings('#connectivity_status').val('Online')
             enableToggleButton(token)
-            }else{
+            }else if(data["connection_status"] === "false"){
             $('.' + token).siblings('#connectivity_status').val('Offline')
             disableToggleButton(token)
         }
