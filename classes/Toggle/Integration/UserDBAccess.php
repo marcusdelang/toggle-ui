@@ -64,7 +64,6 @@ class UserDBAccess {
 			//echo "Prepare failed: (" . $this->conn->errno . ") " . $this->conn->error;
 		} else {
             $statment->bind_param("sss", $safeUsername, $safePassword, $email);
-            $statment->execute() ;
             if($statment->execute() === TRUE) {
                 $statment->store_result();
 	            return "true";
@@ -78,20 +77,7 @@ class UserDBAccess {
 
 
 	
-    
-//    public function insertUser($username,$password){
-//		$safeUsername = $this->conn->real_escape_string($username); 
-//		$safePassword = $this->conn->real_escape_string($password); 		
-//		$statment = $this->conn->prepare("INSERT INTO user_info (username, password) VALUES (?,?);");
-//		if (!$statment) {
-//			echo "Prepare failed: (" . $this->conn->errno . ") " . $this->conn->error;
-//		} else {
-//            $statment->bind_param("ss", $safeUsername, $safePassword);
-//            $statment->execute() ;
-//			return TRUE;
-//		}
-//		mysqli_close($this->conn) or die (mysql_error());
-//    }
+
 
 
 

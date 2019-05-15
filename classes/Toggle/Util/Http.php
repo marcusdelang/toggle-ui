@@ -13,18 +13,25 @@ $options = array(
   
   $context  = stream_context_create( $options );
   $result = file_get_contents($url, false, $context );
+
+  if(isset($http_response_header)){
   $resHeader = $http_response_header[0];
-  
+
   if(strpos($resHeader, '200') !== false){
-    //echo 'Response contains 200: true' . "\n";
     $statuscode = "200";
-  } else {
+  }else {
     $statuscode = "500";
     $result=json_encode(array(
       "status_power"=>"unknown"
     ));
-    //echo 'Response contains 200: false' . "\n";
   }
+}else {
+    $statuscode = "500";
+    $result=json_encode(array(
+      "status_power"=>"unknown"
+    ));
+}
+
   $resultArray=array(
     "statusCode"=>$statuscode,
     "result"=>$result

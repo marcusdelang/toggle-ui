@@ -13,7 +13,9 @@
     text-align: center;
     font-size-adjust: 0.58;
 }
-
+.device-header{
+    width: 14vw;
+}
 .device-header *{
     margin: 0;
     font-weight: bolder;
@@ -25,37 +27,51 @@
     justify-content: center;
     flex-direction: column
 }
+.spacer {
+    flex: 1;
+}
+
 .device-items *{
     margin: 0;
     width: 20vh;
     height: 2rem;
+    
 }
-.device-items button{
+.delete_device{
     border-radius: 5px;
-    color: white;
     font-weight: bolder;
-    background: #83B4B3;
     font-size:  1rem;
     margin: 0;
     width: 20vh;
     height: 2.4rem;
+    background: #83B4B3;
+    color: white;
 }
-
-
-.add-device input{
-    margin: 0;
-    width: 20vh;
-    height: 2rem;
-}
-.add-device button{
+.device-item button{
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size:  1rem;
     margin: 0;
     width: 20vh;
     height: 2.4rem;
+    
 }
+.button_disable {
+    opacity: 0.3;
+    border: 1px;
+    background: #8a8888;
+    color: #666666;} 
+.button_enable{
+
+    border: 1px solid #c70909;
+    background: #83B4B3;
+    color: white;
+}
+
 #add_device {
         display: block;
-        width: 115px;
-        height: 25px;
+        width: 120px;
+        height: 20px;
         text-decoration: none;
         background: #83B4B3;
         padding: 10px;
@@ -63,5 +79,5 @@
         border-radius: 5px;
         color: white;
         font-weight: bolder;
-        font-size:  1rem;
+        font-size:  1.1rem;
 }
