@@ -1,15 +1,19 @@
  $(function() {
   getConnectionStatus()
   getPowerStatus()
-  $("#toggle_device_status").click(toggleDevice);
-  $("#delete_device").click(removeDevice);
+  getDevices()
+  removeDevice()
+  toggleDevice()
+  //$(".toggle_device_status").click(toggleDevice);
+  //$(".delete_device").click(removeDevice);
 
 });
 
 function getConnectionStatus(){
+  var device = $('#device_token').val();;
     $.ajax({ 
         url: '/View/get_connection_status.php',
-        data: {token : "3ja3bU?geh"},
+        data: {token : device},
         type: 'post',
         dataType:'json',
         success: function(data) {
@@ -26,9 +30,10 @@ function getConnectionStatus(){
 };
 
 function getPowerStatus(){
+  var device = $('#device_token').val();;
     $.ajax({ 
         url: '/View/get_power_status.php',
-        data: {token : "3ja3bU?geh"},
+        data: {token : device},
         type: 'post',
         dataType:'json',
         success: function(data) {
@@ -45,13 +50,16 @@ function getPowerStatus(){
 
 
 function toggleDevice(){
-    var device = "3ja3bU?geh";
-    var power_status = $('#power_status').val();
+  $('.device-items').on('click','.toggle_device_status', function () {
+    let device = $(this);
+    let device_token = device.attr('id');
+    let power_status = device.prevAll('#power_status').val();
+    alert(power_status)
     if(power_status === "On"){
     $.ajax({
       url: "/View/turn_off_process.php",
       data: {
-        token: device
+        token: device_token
       },
       type: "post",
       dataType: "json",
@@ -87,32 +95,66 @@ function toggleDevice(){
         },
         error: function(error){
         }
+    });
+  }});
+}
+  
+function removeDevice(){
+  $('.device-items').on('click','.delete_device', function () {
+    let device = $(this);
+    let device_token = device.attr('id');
+    $.ajax({
+      url: "/View/remove_device.php",
+      data: {
+        device_token: device_token,
+      },
+      type: "post",
+      dataType: "json",
+      success: function(data) {
+        if (data["remove_device_result"] === "true") {
+          alert("Your device has been removed from database.")
+          window.location.href="devicesPage.php"
+        } else{
+          alert("Unable to remove said device.")
+        }
+      },
+      error: function(error) {
+        }
+    });
 });
 }
-}  
 
 
-function removeDevice() {
-  event.preventDefault();
-  var token = $('#device_token').val();
+function getDevices() {
   $.ajax({
-    url: "/View/remove_device.php",
-    data: {
-      device_token: token,
-    },
-    type: "post",
+    url: "/View/get_devices.php",
     dataType: "json",
     success: function(data) {
-      if (data["remove_device_result"] === "true") {
-        alert("Your device has been removed from database.")
-        window.location.href="devicesPage.php"
-      } else{
-        alert("Unable to remove said device.")
-      }
+      for (var i = 0; i < data["get_devices_result"].length; i++) {
+      let token = data["get_devices_result"][i]["token"];
+      let name = data["get_devices_result"][i]["name"];
+      $(".device-items").append(
+        '<div class="device-item">'
+        + '<button class="toggle_device_status" type="submit" name="action" id="'
+        + token
+        + '">Toggle</button>'
+        + '<input  id="device_token" type="text" name="text" value="'
+        + token
+        + '" readonly="readonly"/>'
+        + '<input  id="device_text" type="text" name="text" value="'
+        + name
+        + '"/>'
+        + '<input  id="power_status" type="text" name="text" value="N/A" placeholder="unknown" readonly="readonly"/>'
+        + '<input  id="connectivity_status" type="text" name="text" value="Offline" readonly="readonly"/>'
+        + '<button class="delete_device" type="submit" name="action" id="'
+        + token
+        + '">Remove</button>'
+        + '</div>'
+        + '<br>'
+        );}
     },
-    error: function(error) {
-c      }
+    error: function(a,b,c) {
+      alert(c)
+      }
   });
 }
-
-

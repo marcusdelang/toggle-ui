@@ -29,36 +29,6 @@
                 <input  type="text" name="text" value="Connection Status" readonly="readonly"/>
             </div>
             <div class="device-items">
-                <button id="toggle_device_status" 
-                        type="submit"   
-                        name="action" 
-                        >Toggle</button>
-                <input  id="device_token" 
-                        type="text" 
-                        name="text" 
-                        value="test_token" 
-                        readonly="readonly"/>
-                <input  id="device_text"
-                        type="text" 
-                        name="text" 
-                        value="Kitchen" />
-                <input  id="power_status" 
-                        type="text" 
-                        name="text" 
-                        value="N/A" 
-                        placeholder="unknown"
-                        readonly="readonly"/>
-                <input  id="connectivity_status" 
-                        type="text" 
-                        name="text" 
-                        value="Offline" 
-                        readonly="readonly"/>
-                <button id="delete_device"
-                        type="submit" 
-                        name="action" 
-                        value="delete">Remove</button>
-            </div>
-            <div id="new-devices">
             </div>
             <div class="add-device">  
                 <a href="addDevicePage.php" id="add_device" role="button" name="action">Add new device</a>

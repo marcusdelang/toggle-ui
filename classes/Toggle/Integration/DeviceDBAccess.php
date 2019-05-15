@@ -68,4 +68,19 @@ class DeviceDBAccess {
 		}
 		mysqli_close($this->conn) or die (mysql_error());
     }
+
+    public function getDevices($username){       
+$sql = "SELECT * FROM devices WHERE username ='$username'";
+$result = mysqli_query($this->conn,$sql);
+$devices = array();
+$array = array();
+while($row = $result -> fetch_assoc()) {
+    $devices = array(
+    'token' => $row['token'],
+    'name' => $row['name']);
+    array_push($array, $devices);
+}
+return $array;
+}
+	
 }

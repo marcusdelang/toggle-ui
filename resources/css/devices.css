@@ -19,6 +19,12 @@
     font-weight: bolder;
     width: 20vh;   
 }
+.device-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
 .device-items *{
     margin: 0;
     width: 20vh;
@@ -33,11 +39,6 @@
     margin: 0;
     width: 20vh;
     height: 2.4rem;
-}
-.new-devices *{
-    margin: 0;
-    width: 20vh;
-    height: 2rem;
 }
 
 

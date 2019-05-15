@@ -11,8 +11,12 @@
         <div class="navbar-items">
             <ul>
                 <li>
-                <a href="mapPage.php">Map</a>
-                <a href="devicesPage.php">Devices</a>
+                <?php
+            if(isset($_SESSION["username"])){                   
+            echo '<a href="mapPage.php">Map</a>';
+            echo '<a href="devicesPage.php">Devices</a>';
+            } ?>
+                
                 <?php
                 if(isset($_SESSION["username"])){
                     echo '<a id="logout" type="submit" value="Login">Logout</a>';
